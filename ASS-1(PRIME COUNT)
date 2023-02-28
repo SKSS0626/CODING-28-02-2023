@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	int n1,n2,i,j,c1=0,c2=0;
+	printf("Enter the first prime number:");
+	scanf("%d",&n1);
+    printf("Enter the last prime number:");
+	scanf("%d",&n2);
+	for(i=n1;i<=n2;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			if(i%j==0)
+			c1++;
+		}
+		if(c1==2)
+		{
+			c2++;
+		}
+		c1=0;
+	}
+	printf("%d prime numbers are there in between %d and %d",c2,n1,n2);
+}
